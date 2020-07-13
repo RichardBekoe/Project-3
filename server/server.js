@@ -33,11 +33,12 @@ expressServer.use(bodyParser.json())
 
 expressServer.use('/api/', Router)
 
+expressServer.listen(port)
+
+module.exports = expressServer
+
 expressServer.use('/', express.static(dist))
 
 expressServer.get('*', function (req, res) {
   res.sendFile(path.join(dist, 'index.html'))
 })
-expressServer.listen(port)
-
-module.exports = expressServer
