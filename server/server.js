@@ -4,6 +4,14 @@ const bodyParser = require('body-parser')
 const Router = require('./router')
 const { port, dbURI } = require('./config/environment')
 
+const expressServer = express()
+
+const path = require('path')
+const dist = path.join(__dirname, 'dist')
+
+
+
+
 mongoose.connect(
   dbURI,
   {
@@ -15,7 +23,6 @@ mongoose.connect(
   }
 )
 
-const expressServer = express()
 
 expressServer.use((req, res, next) => {
   console.log(`Incoming ${req.method} to ${req.url}`)
@@ -26,6 +33,11 @@ expressServer.use(bodyParser.json())
 
 expressServer.use('/api/', Router)
 
+expressServer.use('/', express.static(dist))
+
+expressServer.get('*', function (req, res) {
+  res.sendFile(path.join(dist, 'index.html'))
+})
 expressServer.listen(port)
 
 module.exports = expressServer

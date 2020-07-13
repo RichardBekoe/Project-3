@@ -13,7 +13,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve('dist')
+    path: path.resolve('./server/dist'),
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -48,4 +49,5 @@ module.exports = {
     }),
     env
   ]
+
 }
