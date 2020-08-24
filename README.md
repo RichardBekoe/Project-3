@@ -66,17 +66,41 @@ Link - [Referenced Code](https://github.com/RichardBekoe/Wilderness/blob/master/
 
 Since the presence of a users login status was available from the use of JWT and local storage, the app was able to utilise conditional rendering and activate user preferences. Our team ultimately leveraged the use of context API to facilitate access to the current user's details across different pages of the application.
 
-Link - [Referenced Code](react.context.api)
+Link - [Referenced Code](https://github.com/RichardBekoe/Wilderness/blob/master/src/components/Context.js)
 
 
 ### User Preferences
 
 The following code demonstrates how user preferences were stored within the application. This functionality allows a user to update and save their display options. This includes a function which saves a user home state; following this, another function which updates and saves this value, attributing the data to the user for future use. Also, an application dark mode was implemented for ease of the website's usability in different environments.
 
+Link - [Referenced Code](https://https://github.com/RichardBekoe/Wilderness/blob/master/src/components/Settings.js)
+
+
 
 ### Cloudinary
 
 The Cloudinary API was implemented to allow users to change their avatars on the app. The Cloudinary widget was imported in the body of our index.html which allowed for straightforward access to the global window object from within React to open the image upload widget:
+
+``` javascript
+function handleAvatarClick() {
+    console.log('Line 40')
+    window.cloudinary.createUploadWidget(
+      {
+        cloudName: 'wilderness',
+        uploadPreset: 'wild_app',
+        cropping: true,
+        croppingAspectRatio: 1,
+        googleApiKey: process.env.GOOGLE_IMAGE_SEARCH_API_KEY
+      },
+      (err, result) => {
+        setAvatar(result.info.secure_url)
+      }
+    ).open()
+  }
+
+```
+
+Link - [Referenced Code](https://github.com/RichardBekoe/Wilderness/blob/master/src/components/MyAccount.js)
 
 
 ## Key Learnings
