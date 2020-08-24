@@ -51,7 +51,8 @@ We resolved to work collaboratively wherever possible and maintained contact thr
 
 A challenge from the outset was the limit set by the RIDB API on the number of results any one request could return. There were thousands of points of interest and many more campgrounds. An alternate method was the utilisation of a database dump, approximating around 500MB, also available from RIDB. We opted to pursue this avenue of seeding the data, to then tailor it to our needs.
 
-An advantage of this approach was that filtering of the data could be applied before storage in our backend. Also quality control could be applied to ensure a consistent and predictable user experience. For example, users always had a point of contact for the campgrounds as this information was checked beforehand and served onto the front end. The following code was written by Alex Nicholas. The code relies upon filtering and mapping the data usable files that could be seeded into our database, see ./server/data/recAreaFilter.js and ./server/data/facilitiesFilter.js.
+An advantage of this approach was that filtering of the data could be applied before storage in our backend. Also quality control could be applied to ensure a consistent and predictable user experience. For example, users always had a point of contact for the campgrounds as this information was checked beforehand and served onto the front end. The following code was written by Alex Nicholas. The code relies upon filtering and mapping the data usable files that could be seeded into our database, see [./server/data/recAreaFilter.js](https://github.com/RichardBekoe/Wilderness/blob/master/server/data/recAreaFilter.js) and [./server/data/facilitiesFilter.js](https://github.com/RichardBekoe/Wilderness/blob/master/server/data/facilitiesFilter.js) .
+
 
 ### Campground Page
 
@@ -59,9 +60,14 @@ To facilitate navigation and in response to bugs with the user clicking the brow
 
 I researched and outsourced a camping themed GIF which could be used while the API call for the relevant campground is being made. Details for each campground are displayed with varying conditional logic depending on whether the user is logged in and whether the campground has certain attributes (such as being accessible by car). The campground's reviews are also listed on the page and a logged-in user has the ability to leave their own review.
 
+Link - [Referenced Code](https://github.com/RichardBekoe/Wilderness/blob/master/src/components/SingleCampground.js)
+
 ### React Context API
 
 Since the presence of a users login status was available from the use of JWT and local storage, the app was able to utilise conditional rendering and activate user preferences. Our team ultimately leveraged the use of context API to facilitate access to the current user's details across different pages of the application.
+
+Link - [Referenced Code](react.context.api)
+
 
 ### User Preferences
 
