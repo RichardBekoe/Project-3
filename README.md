@@ -1,5 +1,7 @@
 # Wilderness - Project 3
 
+![Wilderness-image](./Wilderness.png)
+
 All credit to Alex Nicholas and Ali Bhimani for the code they contributed to the project, moreover their creative insights and programming skill; they, both, are a pleasure to work with.
 
 ## Contents
