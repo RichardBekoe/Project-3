@@ -75,8 +75,7 @@ Link - [Referenced Code](https://github.com/RichardBekoe/Wilderness/blob/master/
 
 The following code demonstrates how user preferences were stored within the application. This functionality allows a user to update and save their display options. This includes a function which saves a user home state; following this, another function which updates and saves this value, attributing the data to the user for future use. Also, an application dark mode was implemented for ease of the website's usability in different environments.
 
-Link - [Referenced Code](https://https://github.com/RichardBekoe/Wilderness/blob/master/src/components/Settings.js)
-
+Link - [Referenced Code](https://github.com/RichardBekoe/Wilderness/blob/master/src/components/Settings.js)
 
 
 ### Cloudinary
