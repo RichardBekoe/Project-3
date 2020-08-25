@@ -19,7 +19,8 @@ All credit to Alex Nicholas and Ali Bhimani for the code they contributed to the
   - [Cloudinary](#cloudinary)
 - [Key Learnings](#key-learnings)
 - [Challenges](#challenges)
-- [Conclusions](#conclusions)
+- [Conclusions and Achievements](#conclusions-and-achievements)
+- [Bugs](#bugs)
 
 ## Brief
 
@@ -28,7 +29,7 @@ Build a full-stack MERN web application and deploy to Heroku. Use an Express API
 
 ## Approach
 
-After researching a number of public APIs, we delved deeper into https://ridb.recreation.gov/, an American government website listing "rec areas"—i.e. points of interest such as national parks—and "facilities", which encompassed campgrounds. The API was easy to navigate and utilise. We decided to build a camping app which would enable people to discover rec areas in any US state and find campgrounds and hotels nearby.
+After researching a number of public APIs, we delved deeper into https://ridb.recreation.gov/, an American government website listing "rec areas"—i.e. points of interest such as national parks—and "facilities", which encompassed campgrounds. The API was easy to navigate and utilise. We decided to build a camping app which would enable people to discover rec areas in any US state and find campgrounds and hotels nearby. The project timeline for this website application was 1 week: initially we started with the planning stages, including building a wireframe, then we continued with configuring the backend. After, we moved on to constructing the frontend code. As the collaboration was largely remote we communicated through the use of online video conferencing applications.
 
 ## Technologies Used
 - HTML; CSS/Sass; JavaScript; React
@@ -51,7 +52,7 @@ We resolved to work collaboratively wherever possible and maintained contact thr
 
 ### Data Mining
 
-A challenge from the outset was the limit set by the RIDB API on the number of results any one request could return. There were thousands of points of interest and many more campgrounds. An alternate method was the utilisation of a database dump, approximating around 500MB, also available from RIDB. We opted to pursue this avenue of seeding the data, to then tailor it to our needs.
+A challenge from the outset was the limit set by the RIDB API on the number of results any one request could return. There were thousands of points of interest and many more campgrounds. An alternate method was the utilisation of a database dump, approximating around 500MB, also available from RIDB. As a team we all opted to pursue the avenue of seeding the data, to then be able to tailor it to our needs.
 
 An advantage of this approach was that filtering of the data could be applied before storage in our backend. Also quality control could be applied to ensure a consistent and predictable user experience. For example, users always had a point of contact for the campgrounds as this information was checked beforehand and served onto the front end. The following code was written by Alex Nicholas. The code relies upon filtering and mapping the data usable files that could be seeded into our database, see [./server/data/recAreaFilter.js](https://github.com/RichardBekoe/Wilderness/blob/master/server/data/recAreaFilter.js) and [./server/data/facilitiesFilter.js](https://github.com/RichardBekoe/Wilderness/blob/master/server/data/facilitiesFilter.js) .
 
@@ -114,8 +115,13 @@ Preparation of the source of data that the application relies on, was a crucial 
 
 Working with a large amount of data insofar as finding anomalous data points was concerned. The site descriptions lacked consistency and it was a challenge trying to account for the various anomalous patterns that could occur. Working with large amounts of data was a challenge, although I feel that I handled such contributions well. The camground site descriptions lacked consistency and due to the broad variation in the type of data it required additional time and attention.
 
-## Conclusions
+## Conclusions and Achievements
 
 Overall I am very pleased with the outcome of our project work, of which was completed under fixed time constraints. I am appreciative of the team's determination to achieve the high standard that is demonstrated. Additional libraries which I had not previously used prior to the project were explored and successfully implemented. Throughout the application the use of context allowed personalisation and these settings were stored for future use via user settings. This therefore would increase user interaction and engagement with our application.
+
+## Bugs
+
+We spent a significant amount of time testing this application therefore, I feel that it is largely bug free and functions as we aspect. However,  despite the filtering and data corrections, on occasions there are places were the data source presents unexpected or unformatted data.
+
 
 
